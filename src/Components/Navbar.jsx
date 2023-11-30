@@ -142,6 +142,7 @@ const MobileNavbar = () => {
                     ? `${theme.textColor}`
                     : `${theme.pathColor}`
                 }`}
+                onClick={() => setTapHamburger(!tapHamburger)}
               >
                 {link.desc}
               </Link>
