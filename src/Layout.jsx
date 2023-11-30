@@ -7,10 +7,12 @@ function Layout({ children }) {
   const { theme } = useGlobalStates();
   return (
     <div
-      className={`font-sans transition duration-150 ease-in-out ${theme.bgLayout}`}
+      className={`font-sans flex flex-col min-h-screen transition duration-150 ease-in-out ${theme.bgLayout}`}
     >
       <Navbar />
-      <div className="min-h-screen">{children}</div>
+      <div className="flex-grow flex items-center justify-center">
+        {children}
+      </div>
       <Footer />
     </div>
   );

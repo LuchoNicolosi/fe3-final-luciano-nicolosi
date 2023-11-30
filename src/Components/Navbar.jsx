@@ -4,9 +4,23 @@ import { BsMoonFill } from 'react-icons/bs';
 import { BsSunFill } from 'react-icons/bs';
 import { useGlobalStates } from './utils/global.context';
 import { useState } from 'react';
-import { linksNav } from './utils/links';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { TfiClose } from 'react-icons/tfi';
+
+const linksNav = [
+  {
+    href: '/',
+    desc: 'Home',
+  },
+  {
+    href: '/contact',
+    desc: 'Contact',
+  },
+  {
+    href: '/favs',
+    desc: 'Favs',
+  },
+];
 
 const Navbar = () => {
   return (
@@ -101,6 +115,7 @@ const MobileNavbar = () => {
       <button
         className="absolute left-0 ml-6 transition-transform transform hover:scale-110"
         onClick={() => setTapHamburger(!tapHamburger)}
+        onBlur={() => setTapHamburger(false)}
       >
         <div
           className={`flex gap-4  ${
@@ -132,7 +147,6 @@ const MobileNavbar = () => {
                 {link.desc}
               </Link>
             ))}
-            {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
           </div>
         </div>
       </button>

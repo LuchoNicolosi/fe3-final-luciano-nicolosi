@@ -10,7 +10,7 @@ const Contacto = () => {
     email: '',
   });
   return (
-    <div className="flex justify-center h-[50vh] items-center mx-5">
+    <div className="flex justify-center items-center mx-5">
       <div
         className={`flex items-center flex-col  ${theme.bgNavCard} ${
           theme.bgLayout === 'bg-[#1e313e]' && 'border-2 border-[#a8c8c1]'
@@ -28,7 +28,7 @@ const Contacto = () => {
           </>
         ) : (
           <h1 className={`text-2xl ${theme.pathColor}`}>
-          ¡Gracias <span className="font-semibold">{data.name}</span> te
+            ¡Gracias <span className="font-semibold">{data.name}</span> te
             contactaremos cuanto antes vía mail!
           </h1>
         )}

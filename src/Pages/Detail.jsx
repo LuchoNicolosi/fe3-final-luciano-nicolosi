@@ -22,9 +22,7 @@ const Detail = () => {
       {data ? (
         <DetailCard theme={theme} data={data} />
       ) : (
-        <div className="flex h-screen justify-center items-center">
-          <h1 className={`font-bold text-xl ${theme.pathColor}`}>Loading...</h1>
-        </div>
+        <h1 className={`font-bold text-xl ${theme.pathColor}`}>Loading...</h1>
       )}
     </div>
   );

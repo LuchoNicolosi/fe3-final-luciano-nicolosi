@@ -19,14 +19,14 @@ const Card = ({ data }) => {
 
   return (
     <li
-      className={`flex flex-col justify-between shadow-md ${theme.bgNavCard} ${
+      className={`shadow-md ${theme.bgNavCard} ${
         theme.bgLayout === 'bg-[#1e313e]' && 'border-2 border-[#a8c8c1]'
       } rounded-md w-64 h-80`}
     >
       {/* En cada card deberan mostrar en name - username y el id */}
       <div className="flex h-5/6 flex-col justify-center items-center gap-4">
         <img
-          className="inline-block h-32 w-32 rounded-full ring-4 ring-[#c1dad6]"
+          className="h-32 w-32 rounded-full ring-4 ring-[#c1dad6]"
           src="./images/doctor.jpg"
           alt=""
         />
@@ -56,9 +56,7 @@ const Card = ({ data }) => {
           </button>
         )}
       </div>
-      {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
 
-      {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
     </li>
   );
 };
