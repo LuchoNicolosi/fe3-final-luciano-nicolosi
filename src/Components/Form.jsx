@@ -13,8 +13,11 @@ export const Form = ({ sent, setSent, data, setData }) => {
     if (data.name.length < 5) {
       return setError(true);
     }
-    //TODO
-    if (data.email.length < 6) {
+    //Con esta expresión regular puedes validar cualquier dirección de correo elecrónico que contenga caracteres Unicode
+    //Fuente: https://es.stackoverflow.com/questions/142/validar-un-email-en-javascript-que-acepte-todos-los-caracteres-latinos
+    const emailRegex =
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if (!emailRegex.test(data.email)) {
       return setError(true);
     }
 
@@ -40,7 +43,6 @@ export const Form = ({ sent, setSent, data, setData }) => {
             <input
               name="name"
               type="text"
-              required
               placeholder="Nombre"
               value={data.name}
               onChange={handleChange}
@@ -48,7 +50,6 @@ export const Form = ({ sent, setSent, data, setData }) => {
             <input
               name="email"
               type="email"
-              required
               placeholder="Email"
               value={data.email}
               onChange={handleChange}

@@ -28,8 +28,8 @@ const Contacto = () => {
           </>
         ) : (
           <h1 className={`text-2xl ${theme.pathColor}`}>
-            !Gracias <span className="font-semibold">{data.name}</span> te
-            contactaremos cuanto antes vía mail¡
+          ¡Gracias <span className="font-semibold">{data.name}</span> te
+            contactaremos cuanto antes vía mail!
           </h1>
         )}
       </div>
