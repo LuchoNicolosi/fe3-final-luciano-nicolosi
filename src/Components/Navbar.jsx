@@ -112,23 +112,22 @@ const MobileNavbar = () => {
     <div
       className={`flex justify-center items-center font-semibold text-3xl ${theme.bgNavbar} py-8 shadow-md lg:hidden`}
     >
-      <button
-        className="absolute left-0 ml-6 transition-transform transform hover:scale-110"
-        onClick={() => setTapHamburger(!tapHamburger)}
-        onBlur={() => setTapHamburger(false)}
-      >
+      <div className="absolute left-0 ml-6 transition-transform transform hover:scale-110">
         <div
           className={`flex gap-4  ${
             tapHamburger && theme.bgFooter + ' mt-24 shadow-md'
           } px-2 py-4  rounded-md ${theme.pathColor}`}
         >
-          <div>
+          <button
+            className="flex"
+            onClick={() => setTapHamburger(!tapHamburger)}
+          >
             {tapHamburger ? (
               <TfiClose className="cursor-pointer" />
             ) : (
               <RxHamburgerMenu className="cursor-pointer" />
             )}
-          </div>
+          </button>
           <div
             className={`${
               tapHamburger ? 'flex' : 'hidden'
@@ -149,7 +148,7 @@ const MobileNavbar = () => {
             ))}
           </div>
         </div>
-      </button>
+      </div>
       <Link to="/">
         <div className="flex justify-center">
           <p className="text-[#697c78]">D</p>
