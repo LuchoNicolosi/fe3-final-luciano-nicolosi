@@ -12,7 +12,7 @@ const Footer = () => {
         <p className="font-semibold">Powered by</p>
         <img src="/images/DH.png" alt="DH-logo" className="w-40" />
       </div>
-      <div className="flex w-1/5 justify-around pb-2">
+      <div className="flex w-2/4 lg:w-1/5 justify-around pb-2">
         {socialMedia.map((media, i) => (
           <a href={media.href} target="_blank" key={i}>
             <img className="w-8" alt={media.alt} src={media.src} />

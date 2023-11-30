@@ -1,20 +1,19 @@
 import React from 'react';
-import { useGlobalStates } from './utils/global.context';
 
 export const DetailCard = ({ data, theme }) => {
   return (
-    <div className={`max-w-screen-md mx-auto mt-10 ${theme.pathColor}`}>
-      <table className="min-w-full border-4 border-[#c1dad6]">
+    <div className={`max-w-screen-md mx-auto px-2 mt-10 ${theme.pathColor}`}>
+      <table className="flex min-w-full border-4 border-[#c1dad6]">
         <thead>
-          <tr>
+          <tr className="flex flex-col">
             <th className="py-2 px-4 border border-[#c1dad6]">Nombre</th>
             <th className="py-2 px-4 border border-[#c1dad6]">Email</th>
             <th className="py-2 px-4 border border-[#c1dad6]">Telefono</th>
-            <th className="py-2 px-4 border border-[#c1dad6]">Web-site</th>
+            <th className="py-2 px-4 border border-[#c1dad6]">Website</th>
           </tr>
         </thead>
-        <tbody>
-          <tr className="text-center font-semibold">
+        <tbody className="w-full">
+          <tr className="flex flex-col w-full text-center font-semibold">
             <td className="py-2 px-4 border border-[#c1dad6]">{data.name}</td>
             <td className="py-2 px-4 border border-[#c1dad6]">{data.email}</td>
             <td className="py-2 px-4 border border-[#c1dad6]">{data.phone}</td>

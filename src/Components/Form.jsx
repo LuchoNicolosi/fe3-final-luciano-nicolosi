@@ -4,7 +4,6 @@ import { useGlobalStates } from './utils/global.context';
 
 export const Form = ({ sent, setSent, data, setData }) => {
   //Aqui deberan implementar el form completo con sus validaciones
-  const { theme } = useGlobalStates();
 
   const [error, setError] = useState(false);
 
@@ -37,7 +36,7 @@ export const Form = ({ sent, setSent, data, setData }) => {
       {!sent && (
         <>
           <form
-            className="flex flex-col w-full mt-10 gap-5 "
+            className="flex flex-col w-full mt-10 gap-5"
             onSubmit={handleSubmit}
           >
             <input
